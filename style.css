@@ -90,7 +90,7 @@ h3 {
   display: block;
   margin: 0 0 20px;
 }
-#new-task {
+.input-new-task {
   width: 318px;
 }
 
@@ -104,7 +104,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-.general-li > * {
+.general-li{
   vertical-align: middle;
 }
 
