@@ -120,14 +120,14 @@ h3 {
 .input-task {
   width: 226px;
 }
-.general-button
+
 .delete-task
 img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.general-button
+
 .delete-task
 img:hover {
   transform: rotateZ(0);
