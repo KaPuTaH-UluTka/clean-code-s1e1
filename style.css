@@ -10,10 +10,12 @@ body {
   display: block;
   text-align: right;
 }
-.header-wrapper img {
+.header-wrapper
+img {
   width: 100%;
 }
-.header-wrapper .more-inf {
+.header-wrapper
+.more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -117,17 +119,23 @@ h3 {
 .input-task {
   width: 226px;
 }
-.general-button.delete-task img {
+.general-button
+.delete-task
+img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.general-button.delete-task img:hover {
+.general-button
+.delete-task
+img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.done-tasks .general-li .label-li {
+.done-tasks
+.general-li
+.label-li {
   text-decoration: line-through;
   color: #888;
 }
@@ -142,6 +150,7 @@ h3 {
   width: 224px;
 }
 
-.edit-mode .label-li {
+.edit-mode
+.label-li {
   display: none;
 }
