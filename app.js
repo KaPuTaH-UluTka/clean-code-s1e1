@@ -34,20 +34,20 @@ var createNewTaskElement=function(taskString){
 
     label.innerText=taskString;
     label.className='task';
-    label.classList.add("label-li");
+    label.classList.add("general-li__label-li");
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     checkBox.classList.add("checkbox-li");
     editInput.type="text";
     editInput.className="task";
-    editInput.classList.add("input-task");
-    editInput.classList.add("input-none");
+    editInput.classList.add("general-li__input-task");
+    editInput.classList.add("general-li__input-none");
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit-task";
-    editButton.classList.add("general-button");
-    deleteButton.className="delete-task";
-    deleteButton.classList.add("general-button");
+    editButton.className="general-li__edit-task";
+    editButton.classList.add("general-li__general-button");
+    deleteButton.className="general-li__delete-task";
+    deleteButton.classList.add("general-li__general-button");
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -86,10 +86,10 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('.input-task');
+    var editInput=listItem.querySelector('.general-li__input-task');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit-task");
-    var containsClass=listItem.classList.contains("edit-mode");
+    var editBtn=listItem.querySelector(".general-li__edit-task");
+    var containsClass=listItem.classList.contains("not-complete-tasks__edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -97,15 +97,15 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
-        editInput.classList.remove("input-edit");
+        editInput.classList.remove("general-li__input-edit");
     }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
-        editInput.classList.add("input-edit");
+        editInput.classList.add("general-li__input-edit");
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("not-complete-tasks__edit-mode");
 };
 
 
@@ -162,8 +162,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit-task");
-    var deleteButton=taskListItem.querySelector("button.delete-task");
+    var editButton=taskListItem.querySelector("button.general-li__edit-task");
+    var deleteButton=taskListItem.querySelector("button.general-li__delete-task");
 
 
     //Bind editTask to edit button.

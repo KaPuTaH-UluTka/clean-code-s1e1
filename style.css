@@ -10,13 +10,12 @@ body {
   display: block;
   text-align: right;
 }
-.header-wrapper
-figure
-img {
+
+.header-wrapper__eisenhower-img {
   width: 100%;
 }
-.header-wrapper
-.more-inf {
+
+.header-wrapper__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -36,7 +35,7 @@ img {
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.section-add-tasks__task-row-wrapper {
   display: flex;
 }
 ul {
@@ -46,6 +45,7 @@ ul {
 h3 {
   list-style: none;
 }
+.general-li__general-button,
 .general-button {
   outline: none;
   background: none;
@@ -56,11 +56,12 @@ h3 {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+.general-li__general-button:hover,
 .general-button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-.title-new-task {
+.section-add-tasks__title-new-task {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -69,7 +70,7 @@ h3 {
   margin: 0;
   text-transform: uppercase;
 }
-.input-task {
+.general-li__input-task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -81,12 +82,12 @@ h3 {
   font-family: Lato, sans-serif;
   color: #888;
 }
-.input-task:focus {
+.general-li__input-task:focus {
   color: #333;
 }
 
 /* New Task */
-.title-new-task {
+.section-add-tasks__title-new-task {
   display: block;
   margin: 0 0 20px;
 }
@@ -111,47 +112,47 @@ h3 {
 .checkbox-li {
   margin: 0 10px;
 }
-.label-li {
+.general-li__label-li {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.input-task {
+.general-li__input-task {
   width: 226px;
 }
 
-.delete-task
+.general-li__delete-task
 img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete-task
+.general-li__delete-task
 img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.done-tasks
+.completed-tasks
 .general-li
-.label-li {
+.general-li__label-li {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.input-none {
+.general-li__input-none {
   display: none
 }
 
-.input-edit {
+.general-li__input-edit {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode
-.label-li {
+.not-complete-tasks__edit-mode
+.general-li__label-li {
   display: none;
 }
